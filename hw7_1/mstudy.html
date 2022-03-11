@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		#pic{
+			height: 3em;
+			width: 4em;
+		}
+		#mstudy_mcareer{
+			min-height: 70vh;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- page 부분 -->
+	<div data-role="page">
+
+		<!-- header 부분 -->
+		<div data-role="header">
+			<h1>이현복 홈페이지</h1>
+		</div>
+
+		<!-- content 부분 -->
+		<div data-role="content">
+			<div data-role="tabs">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#mintro">자기소개</a></li>
+						<li><a href="#minfo">인적사항</a></li>
+						<li><a href="#mstudy_mcareer">경력</a></li>
+					</ul>
+				</div>
+
+				<!-- mintro 영역 -->
+				<div id="mintro">
+					<h3>자기소개</h3>
+					<img id="pic" src="me.jpg"/>
+					<p>
+						저는 17학번 소프트웨어공학과 이현복입니다.
+						학교를 오랜만에 들어와서 공부를 시작하니 너무 재밌고 좋습니다.
+						2년의 공백 기간을 매꾸기 위해 열심히 노력하겠습니다!
+					</p>
+					<h3>참조링크</h3>
+					<a href="http://www.naver.com">
+						<img class="portal" src="naver.jpg" alt="네이버이동"/>
+					</a>
+					<a href="http://www.google.com">
+						<img class="portal" src="google.jpg" alt="구글이동"/>
+					</a>
+					<a href="http://www.daum.net">
+						<img class="portal" src="daum.jpg" alt="다음이동"/>
+					</a>
+				</div>
+
+				<!-- minfo 영역 -->
+				<div id="minfo">
+					<h3>인적사항</h3>
+					<ul>
+						<li>성    명 : 이현복</li>
+						<li>생년월일 : 1998. 09. 05</li>
+						<li>주    소 : 경기도 하남시 미사강변동로</li>
+						<li>연 락 처 : 010-123-4567</li>
+						<li>학    력
+
+						<table class="ui-responsive table-stript" data-role="table" data-mode="columntoggle" id="my-table1">
+							<thead>
+								<tr>
+									<th data-priority="1">출신학교</th>
+									<th data-priority="2">기간</th>
+									<th data-priority="3">지역</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>	<td>2005 ~ 2010</td><td> 응봉초등학교 졸업</td> <td>서울시 성동구 응봉동</td>	</tr>
+								<tr>	<td>2011 ~ 2013</td><td> 광희중학교 졸업</td> <td>서울시 성동구 응봉동</td> </tr>
+								<tr>	<td>2014 ~ 2016</td><td> 성동고등학교 졸업</td> <td>서울시 중구 신당동</td> </tr>
+								<tr>	<td>2017 ~ </td>
+									<td> <a href="https://www.google.com/maps/place/SKHU+%E2%94%82+Sungkonghoe+University/@37.4877355,126.8229683,17z/data=!3m1!4b1!4m5!3m4!1s0x357b6261e34e06e3:0xcbd0485192bc91e6!8m2!3d37.4877355!4d126.825157">
+										성공회대학교</a> 소프트웨어공학과
+									</td>
+									<td>서울시 구로구 항동</td>
+								</tr>
+							</tbody>
+						</table>
+						</li>
+					</ul>
+				</div>
+
+				<!-- mstudy_mcareer 영역 -->
+				<div id="mstudy_mcareer">
+					<!-- mstudy 영역 -->
+					<div data-role="panel" id="mstudy" data-display="overlay">
+						<ul data-role="listview" data-filter="true" data-filter-placeholder="검색키워드 입력하세요">
+							<li data-role="list-divider"> 2021-1학기 </li>
+							<li><img src="jqmlogo.png"><span class="ui-li-count">전선</span> 하이브리드 앱 프로그래밍 </li>
+							<li><img src="java.png"><span class="ui-li-count">전필</span> 알고리즘 </li>
+							<li><img src="html.png"><span class="ui-li-count">전선</span> 웹프로그래밍 </li>
+
+							<li data-role="list-divider">2020-2학기</li>
+							<li><span class="ui-li-count">전필</span> 자료구조론 </li>
+							<li><span class="ui-li-count">전선</span> 데이터베이스실습 </li>
+							<li><span class="ui-li-count">전선</span> 웹페이지구축Ⅲ </li>
+						</ul>
+					</div>
+					<!-- mcareer 영역 -->
+					<div data-role="panel" id="mcareer" data-display="overlay" data-position="right">
+						<ul data-role="listview">
+							<li data-role="list-divider">워크숍</li>
+							<li>
+								2018.6소프트웨어공학과 대학워크숍 참석<br/>
+								<div>
+									<img id="pic" src="seminar1.jpg"/>
+									<img id="pic" src="seminar2.jpg"/>
+									<img id="pic" src="seminar3.jpg"/>
+								</div>
+							</li>
+							<li data-role="list-divider">인턴쉽</li>
+							<li>2017.6 ~ 2018.6 성공회대 미디어센터 방송국 활동</li>
+							<li data-role="list-divider">봉사</li>
+							<li>2021.3 하남시 1924 청소년 봉사 도우미 활동</li>
+						</ul>
+					</div>
+					<a href="#mstudy" data-role="button" data-inline="true">교과</a>
+					<a href="#mcareer" data-role="button" data-inline="true">비교과</a>
+				</div>
+
+			</div>
+		</div>
+		<!-- footer 부분 -->
+		<div data-role="footer" data-position="fixed">
+			<h2>Copyright &copy; 2014 Hong, GilDong </h2>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* timeline의 바탕면  */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* timeline의 바탕면 가운데 흰 줄 */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* 컨텐츠가 들어갈 공간 */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* 컨텐츠 박스 위치 표시해 주는 동그란 위치표시 */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* 왼쪽에 위치한 컨텐츠 */
+.left {
+  left: 0;
+}
+
+/* 오른쪽에 위치한 컨텐츠 */
+.right {
+  left: 50%;
+}
+
+/* 왼쪽 화살표 표시해주는 것 처럼 보이게 해주는 박스 */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* 오른쪽 화살표 표시해주는 것 처럼 보이게 해주는 박스 */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* 오른쪽 위치한 동그란 표시 오른쪽으로 만들어진 것 왼쪽으로 이동*/
+.right::after {
+  left: -16px;
+}
+
+/* 내용칸 추가 */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* 600px로 줄어들면 */
+@media screen and (max-width: 600px) {
+  /* 중앙 바 왼쪽으로 이동 */
+  .timeline::after {
+  left: 31px;
+  }
+
+  /* 컨텐츠 모양 표시 */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  /* 컨텐츠 위치 화살표 표시 왼쪽으로 이동 */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* 왼쪽 오른쪽 컨텐츠 모두 오른쪽으로 보게 이동 */
+  .left::after, .right::after {
+  left: 15px;
+  }
+
+  /* 오른쪽에 있던거 위치 이동 */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2017</h2>
+      <p>딱히 할게 없다.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2016</h2>
+      <p>이또한 할게 없다.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2015</h2>
+      <p>귀찮아 죽겠다.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2012</h2>
+      <p>친구좀 많이 사귀어 놓을껄...</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2011</h2>
+      <p>쓋</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2007</h2>
+      <p>하....</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

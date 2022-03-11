@@ -1,0 +1,9 @@
+{
+	"booklist": [
+	   {"title":"느림의 미학", "bookKind":"인문", "author":"박현우", "publisher":"행복 출판사", "price":"30000", "year":"1996"},
+		 {"title":"나 혼자만 레벨업", "bookKind":"인문", "author":"추공", "publisher":"파피루스", "price":"10000", "year":"2019"},
+		 {"title":"쉽게 배우는 알고리즘", "bookKind":"컴퓨터", "author":"문병로", "publisher":"한빛아카데미", "price":"27000", "year":"2018"},
+		 {"title":"XML DATABASE Programming", "bookKind":"컴퓨터", "author":"홍길동", "publisher":"행복 출판사", "price":"25000", "year":"2015"},
+		 {"title":"하이브리드 입문", "bookKind":"컴퓨터", "author":"박성진", "publisher":"생능 출판사", "price":"33000", "year":"2017"}
+	]
+}

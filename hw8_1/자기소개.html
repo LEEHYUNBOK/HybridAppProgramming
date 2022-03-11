@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$( document ).bind( "mobileinit", function() {
+			$.support.cors                 = true;
+			$.mobile.allowCrossDomainPages = true;
+			$.mobile.pushStateEnabled      = false;
+		});
+	</script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+	   li { list-style:none; }
+	  .picture { list-style:none; padding:0; margin:0; }
+	  .picture li { float:left; width:50%;}
+	  .picture li a {display:block; margin:5px; border: 1px }
+	  .picture li img { display:block; width:40%;  height:auto;}
+	  .picture li img:hover { display:block; width:100%;  height:auto;}
+	</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<!-- home 영역 -->
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>자기 소개 앱</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+			<img src="아기공룡.jpg" style="width:16em;height:9em;">
+
+			<!-- 소개영역 -->
+			<div data-role="collapsible">
+				<h3>내 소개</h3>
+				<!-- 학력 영역 -->
+				<div data-role="collapsible">
+					<h3>학력</h3>
+					<table class="ui-responsive table-stript" data-role="table" id="my-table1">
+						<thead>
+							<tr>
+								<th data-priority="1">출신학교</th>
+								<th data-priority="2">기간</th>
+								<th data-priority="3">지역</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td>응봉초등학교 졸업</td> <td>2005 ~ 2010</td> <td>서울시 성동구 응봉동</td>	</tr>
+							<tr><td> 광희중학교 졸업</td> <td>2011 ~ 2013</td> <td>서울시 성동구 응봉동</td> </tr>
+							<tr><td> 성동고등학교 졸업</td> <td>2014 ~ 2016</td> <td>서울시 중구 신당동</td> </tr>
+							<tr>
+								<td> <a href="https://www.google.com/maps/place/SKHU+%E2%94%82+Sungkonghoe+University/@37.4877355,126.8229683,17z/data=!3m1!4b1!4m5!3m4!1s0x357b6261e34e06e3:0xcbd0485192bc91e6!8m2!3d37.4877355!4d126.825157">
+									성공회대학교</a> 소프트웨어공학과
+								</td>
+								<td>2017 ~ </td>
+								<td>서울시 구로구 항동</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 경력 영역 -->
+				<div data-role="collapsible">
+					<h3>경력</h3>
+					<!-- 교과 영역 -->
+					<div data-role="collapsible">
+						<h3>교과</h3>
+						<div data-role="collapsible-set">
+							<div data-role="collapsible">
+								<h3>2018-2학기</h3>
+								<ul data-role="listview">
+									<li><span class="ui-li-count">전필</span> 자료구조론 </li>
+									<li><span class="ui-li-count">전선</span> 데이터베이스실습 </li>
+									<li><span class="ui-li-count">전선</span> 웹페이지구축Ⅲ </li>
+								</ul>
+							</div>
+							<div data-role="collapsible" data-collapsed="false">
+								<h3>2021-1학기</h3>
+								<ul data-role="listview">
+									<li><span class="ui-li-count">전선</span> 하이브리드 앱 프로그래밍 </li>
+									<li><span class="ui-li-count">전필</span> 알고리즘 </li>
+									<li><span class="ui-li-count">전선</span> 웹프로그래밍 </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 비교과 영역 -->
+					<div data-role="collapsible">
+						<h3>비교과</h3>
+						<ul data-role="listview">
+							<li data-role="list-divider">워크숍</li>
+							<li>2018.6소프트웨어공학과 대학워크숍 참석</li>
+							<li data-role="list-divider">인턴쉽</li>
+							<li>2017.6 ~ 2018.6 성공회대 미디어센터 방송국 활동</li>
+							<li data-role="list-divider">봉사</li>
+							<li>2021.3 하남시 1924 청소년 봉사 도우미 활동</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#movie" data-rel="dialog">내 영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">내 음성</a></li>
+				<li><a href="#gallery">내 사진</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>자기 소개 앱</h1>
+		</div>
+	</div>
+
+	<!-- movie 영역 -->
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>자기 소개 앱</h1>
+		</div>
+		<div data-role="content" >
+			<div>내가 좋아하는 youtube 영상</div><br/>
+			<li><iframe width="100%" height="240" src="https://www.youtube.com/embed/QUXKib-jfEM" ></iframe></li><br/>
+			<div>내 영상</div><br/>
+			<li>
+				<video controls width="100%" preload="metadata">
+					<source src="영상.mp4" type="video/mp4">
+				</video>
+			</li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+
+	<!-- wizard3-1 영역 -->
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>노래</h1>
+		</div>
+		<div data-role="content">
+			<audio controls width="100%" preload="metadata">
+				<source src="음악.mp3" type="audio/mp3">
+			</audio>
+		</div>
+	</div>
+
+	<!-- gallery 영역 -->
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>갤러리</h1>
+		</div>
+		<div data-role="content">
+      <ul class="picture">
+				<li><a href="daum.jpg" rel="external"><img src="daum.jpg" /></a></li>
+				<li><a href="naver.jpg" rel="external"><img src="naver.jpg" /></a></li>
+				<li><a href="google.jpg" rel="external"><img src="google.jpg" /></a></li>
+				<li><a href="me.jpg" rel="external"><img src="me.jpg" /></a></li>
+      </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>자기 소개 앱</h1>
+		</div>
+	</div>
+</div>
+</body>
+</html>

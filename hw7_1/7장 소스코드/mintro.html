@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 개인 포트폴리오 홈페이지</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            rel="stylesheet"
+            href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.js"></script>
+        <style type="text/css">
+            .semi-pic {
+                width: 4em;
+                height: 3em;
+            }
+            #study_career {
+                min-height: 70vh;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div data-role="page">
+
+            <div data-role="header">
+                <h1>홍길동 홈페이지</h1>
+            </div>
+
+            <div data-role="content">
+                <div data-role="tabs">
+                    <div data-role="navbar">
+                        <ul>
+                            <li>
+                                <a href="#intro">자기소개</a>
+                            </li>
+                            <li>
+                                <a href="#info">인적사항</a>
+                            </li>
+                            <li>
+                                <a href="#study_career">경력</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="intro">
+
+                        <h3>자기소개</h3>
+                        <div class="flex">
+                            <img id="stu-pic" src="stu.jpg"/>
+                            <p>
+                                저는 한국대학교 컴퓨터학과를 졸업하고 모바일 컴퓨팅 관련 분야에 관심을 갖고 있는 홍길동입니다. 평소 프로그래밍을 즐겨하였고 특히, 웹 기술
+                                관련하여 XML과 jQuery, jQuery Mobile, PhoneGap 등에 관심이 많고 다수 개발 경험이 있습니다. 모바일 게임 관련
+                                업체에서 인턴쉽을 수행했으며 데이터베이스 모델링과 튜닝에도 깊은 관심을 가지고 연구하였으며 데이터베이스진흥원에서 주관하는 데이터베이스 관련 공인
+                                자격증도 취득하였습니다. 항상 어떤 환경에서도 최선을 다하고 즐기는 마음으로 열심히 일하고자 합니다.
+                            </p>
+                        </div>
+                        <h3>참고사이트</h3>
+                        <section class="site">
+                            <div class="my-site">
+                                <h3 style="color:white;">참조링크</h3>
+                                <a href="http://www.naver.com">
+                                    <img src="naver.jpg" alt="네이버이동"/>
+                                </a>
+                                <a href="http://www.google.com">
+                                    <img src="google.jpg" alt="구글이동"/>
+                                </a>
+                                <a href="http://www.daum.net">
+                                    <img src="daum.jpg" alt="다음이동"/>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="info">
+                        <h3>인적사항</h3>
+                        <ul>
+                            <li>성 명 : 홍길동</li>
+                            <li>생년월일 : 1989. 12. 25</li>
+                            <li>주 소 : 서울시 종로구 창신동 123</li>
+                            <li>연 락 처 : 010-123-4567</li>
+                            <li>학 력
+
+                                <table
+                                    data-role="table"
+                                    data-mode="columntoggle"
+                                    class="ui-responsive"
+                                    id="basic-toggle">
+                                    <thead>
+                                        <tr>
+                                            <th data-priority="1">출신학교</th>
+                                            <th data-priority="2">졸업년도</th>
+                                            <th data-priority="3">지역</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                하늘초등학교 졸업</td>
+                                            <td>2003. 2</td>
+
+                                            <td>
+                                                서울시 구로구 항동</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                미래중학교 졸업</td>
+                                            <td>2006. 2.</td>
+
+                                            <td>
+                                                서울시 구로구 항동</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                미래고등학교 졸업</td>
+                                            <td>2009. 2.</td>
+
+                                            <td>
+                                                서울시 구로구 항동</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <a
+                                                    href="http://maps.google.com/maps?q=대한민국+서울특별시+구로구+연동로+320&hl=ko"
+                                                    target="_blank">성공회대학교</a>
+                                                IT 학부 재학
+                                            </td>
+                                            <td>2021. 4.</td>
+                                            <td>서울시 구로구 항동</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                        </div>
+
+                        <div id="study_career">
+                            <a href="#study" data-role="button" data-inline="true">교과</a>
+                            <a href="#career" data-role="button" data-inline="true">비교과</a>
+
+                            <div data-role="panel" id="study" data-display="overlay">
+
+                                <ul
+                                    data-role="listview"
+                                    data-filter="true"
+                                    data-filter-placeholder="검색키워드 입력하세요">
+  			<li data-role="list-divider">2021-1학기</li>
+                                    <li><img src="jQuery.png" alt="">하이브리드 앱 프로그래밍<span class="ui-li-count">전선</span></li>
+                                    <li><img src="AI.jpg" alt="">인공지능<span class="ui-li-count">전선</span></li>
+                                    <li><img src="vuejs.png" alt="">프론트엔드 개발<span class="ui-li-count">전필</span></li>
+                                    <li data-role="list-divider" data-divider-theme="a">2020-2학기</li>
+                                    <li>IT 개론<span class="ui-li-count">전필</span></li>
+                                    <li>캡스톤디자인 - 프로젝트<span class="ui-li-count">전필</span></li>
+                                    <li>웹프로그래밍<span class="ui-li-count">전선</span></li> 
+                                </ul>
+                            </div>
+
+                            <div data-role="panel" id="career" data-display="overlay" data-position="right">
+                                <ul data-role="listview">
+                                    <li data-role="list-divider" data-divider-theme="a">세미나(연수)</li>
+
+                                    <li>2012. 4 빅 데이터 응용 세미나 참석</li>
+                                    <li>2013. 3~6 IT 멘토링 사업 참여</li>
+
+                                    <div id="pic-container">
+                                        <img id="pic1" class="semi-pic" src="seminar1.jpg"/>
+                                        <img id="pic2" class="semi-pic" src="seminar2.jpg"/>
+                                        <img id="pic3" class="semi-pic" src="seminar3.jpg"/>
+                                    </div>
+                                    <li data-role="list-divider" data-divider-theme="a">인턴쉽</li>
+
+                                    <li>2013.7~8 하계 인턴쉽 참여(퓨처스게임)</li>
+
+                                    <li data-role="list-divider" data-divider-theme="a">봉사</li>
+
+                                    <li>2011.7 농어촌 봉사활동</li>
+                                    <li>2012.8 취약계층 IT 방문교육서비스 참여</li>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div data-role="footer" data-position="fixed">
+                            <h2>Copyright &copy; 2021 Hong, GilDong
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </body>
+
+        </html>

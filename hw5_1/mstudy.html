@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>201732028_이현복_5-6장 과제</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		#pic{
+			height: 3em;
+			width: 4em;
+		}
+	</style>
+</head>
+<body>
+
+<!-- mstudy 부분 -->
+<div data-role="page" id="mstudy">
+	<!-- header 부분 -->
+	<div data-role="header">
+		<h1>이현복 홈페이지</h1>
+	</div>
+
+	<!-- content 부분 -->
+  <div data-role="content">
+	<section class="section1">
+		<div class="timeline" >
+			<div class="container left">
+				<div class="content-tl">
+					<p>2020-2학기</p>
+					<ul>
+						<li>자료구조론</li>
+						<li>데이터베이스실습</li>
+						<li>웹페이지구축Ⅲ</li>
+					</ul>
+				</div>
+			</div>
+			<div class="container right">
+				<div class="content-tl">
+					<p>2021-1학기</p>
+					<ul>
+						<li>하이브리드 앱 프로그래밍</li>
+						<li>3D캐릭터애니메이션1</li>
+						<li>알고리즘</li>
+						<li>웹프로그래밍</li>
+						<li>고급영상합성</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<aside>
+		<h3>참조링크</h3>
+		<a href="http://www.naver.com">
+			<img class="portal" src="naver.jpg" alt="네이버이동"/>
+		</a>
+		<a href="http://www.google.com">
+			<img class="portal" src="google.jpg" alt="구글이동"/>
+		</a>
+		<a href="http://www.daum.net">
+			<img class="portal" src="daum.jpg" alt="다음이동"/>
+		</a>
+	</aside>
+  </div>
+
+	<!-- footer 부분 -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mintro" data-transition="slide">소개</a></li>
+				<li><a href="#minfo" data-transition="flip">인적사항</a></li>
+				<li><a href="#mstudy" data-transition="slideup">교과</a></li>
+				<li><a href="#mcareer" data-transition="pop">비교과</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- minfo 부분 -->
+<div data-role="page" id="minfo">
+
+	<!-- header 부분 -->
+	<div data-role="header">
+		<h1>이현복 홈페이지</h1>
+	</div>
+
+	<!-- content 부분 -->
+	<div data-role="content">
+		<section class="section1">
+			<h3>인적사항</h3>
+			<ul>
+				<li>성    명 : 이현복</li>
+				<li>생년월일 : 1998. 09. 05</li>
+				<li>주    소 : 경기도 하남시 미사강변동로</li>
+				<li>연 락 처 : 010-123-4567</li>
+				<li>학    력
+				<table id="year-table" border="1">
+					<thead>
+						<tr>	<th>기간</th> <th>출신학교</th></tr>
+					</thead>
+					<tbody>
+						<tr>	<td>2005 ~ 2010</td><td> 응봉초등학교 졸업</td>	</tr>
+						<tr>	<td>2011 ~ 2013</td><td> 광희중학교 졸업</td>	</tr>
+						<tr>	<td>2014 ~ 2016</td><td> 성동고등학교 졸업</td></tr>
+						<tr>	<td>2017 ~ </td><td> <a href="https://www.google.com/maps/place/SKHU+%E2%94%82+Sungkonghoe+University/@37.4877355,126.8229683,17z/data=!3m1!4b1!4m5!3m4!1s0x357b6261e34e06e3:0xcbd0485192bc91e6!8m2!3d37.4877355!4d126.825157">성공회대학교</a> 소프트웨어공학과 </td></tr>
+					</tbody>
+				</table>
+				</li>
+			</ul>
+		</section>
+		<aside>
+			<h3>참조링크</h3>
+			<a href="http://www.naver.com">
+				<img class="portal" src="naver.jpg" alt="네이버이동"/>
+			</a>
+			<a href="http://www.google.com">
+				<img class="portal" src="google.jpg" alt="구글이동"/>
+			</a>
+			<a href="http://www.daum.net">
+				<img class="portal" src="daum.jpg" alt="다음이동"/>
+			</a>
+		</aside>
+	</div>
+
+	<!-- footer 부분 -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mintro" data-transition="slide">소개</a></li>
+				<li><a href="#minfo" data-transition="flip">인적사항</a></li>
+				<li><a href="#mstudy" data-transition="slideup">교과</a></li>
+				<li><a href="#mcareer" data-transition="pop">비교과</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- mcareer 부분 -->
+<div data-role="page" id="mcareer">
+
+	<!-- header 부분 -->
+	<div data-role="header">
+		<h1>이현복 홈페이지</h1>
+	</div>
+
+	<!-- content 부분 -->
+	<div data-role="content">
+		<section class="section1">
+			<h3>워크숍</h3>
+			<ul>
+				<li>2018.6소프트웨어공학과 대학워크숍 참석</li>
+			</ul>
+			<div id="pic-container">
+				<img id="pic" src="seminar1.jpg"/>
+				<img id="pic" src="seminar2.jpg"/>
+				<img id="pic" src="seminar3.jpg"/>
+			</div>
+			<h3>인턴쉽</h3>
+			<ul>
+				<li>2017.6 ~ 2018.6 성공회대 미디어센터 방송국 활동</li>
+			</ul>
+			<h3>봉사</h3>
+			<ul>
+				<li>2021.3 하남시 1924 청소년 봉사 도우미 활동</li>
+			</ul>
+		</section>
+		<aside>
+			<h3>참조링크</h3>
+			<a href="http://www.naver.com">
+				<img class="portal" src="naver.jpg" alt="네이버이동"/>
+			</a>
+			<a href="http://www.google.com">
+				<img class="portal" src="google.jpg" alt="구글이동"/>
+			</a>
+			<a href="http://www.daum.net">
+				<img class="portal" src="daum.jpg" alt="다음이동"/>
+			</a>
+		</aside>
+	</div>
+
+	<!-- footer 부분 -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mintro" data-transition="slide">소개</a></li>
+				<li><a href="#minfo" data-transition="flip">인적사항</a></li>
+				<li><a href="#mstudy" data-transition="slideup">교과</a></li>
+				<li><a href="#mcareer" data-transition="pop">비교과</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- mintro 부분 -->
+<div data-role="page" id="mintro">
+
+	<!-- header 부분 -->
+	<div data-role="header">
+		<h1>이현복 홈페이지</h1>
+	</div>
+
+	<!-- content 부분 -->
+	<div data-role="content">
+		<section class="section1">
+			<h3>자기소개</h3>
+			<img id="pic" src="me.jpg"/>
+			<p>
+				저는 17학번 소프트웨어공학과 이현복입니다.
+				학교를 오랜만에 들어와서 공부를 시작하니 너무 재밌고 좋습니다.
+				2년의 공백 기간을 매꾸기 위해 열심히 노력하겠습니다!
+			</p>
+		</section>
+		<aside>
+			<h3>참조링크</h3>
+			<a href="http://www.naver.com">
+				<img class="portal" src="naver.jpg" alt="네이버이동"/>
+			</a>
+			<a href="http://www.google.com">
+				<img class="portal" src="google.jpg" alt="구글이동"/>
+			</a>
+			<a href="http://www.daum.net">
+				<img class="portal" src="daum.jpg" alt="다음이동"/>
+			</a>
+		</aside>
+	</div>
+
+	<!-- footer 부분 -->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#mintro" data-transition="slide">소개</a></li>
+				<li><a href="#minfo" data-transition="flip">인적사항</a></li>
+				<li><a href="#mstudy" data-transition="slideup">교과</a></li>
+				<li><a href="#mcareer" data-transition="pop">비교과</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
